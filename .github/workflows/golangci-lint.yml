@@ -1,8 +1,10 @@
 lint:
   name: Lint
   runs-on: ubuntu-latest
-  if: github.event_name == 'pull_request'
-  timeout-minutes: 3
+  timeout-minutes: 5
+  on:
+    push:
+    pull:
 
   steps:
     - name: Checkout code
